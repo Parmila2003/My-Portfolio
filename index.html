@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parmila Kanagarajah | Portfolio</title>
+
+  <meta name="description" content="Parmila Kanagarajah — Full Stack Developer, UI/UX Designer, CS Undergraduate." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header class="header">
+    <nav class="nav container">
+      <a class="logo" href="#" data-page="home">Parmila<span>.</span></a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a class="nav-link active" href="#" data-page="home">Home</a></li>
+        <li><a class="nav-link" href="#" data-page="about">About</a></li>
+        <li><a class="nav-link" href="#" data-page="skills">Skills</a></li>
+        <li><a class="nav-link" href="#" data-page="projects">Projects</a></li>
+        <li><a class="nav-link" href="#" data-page="education">Education</a></li>
+        <li><a class="nav-link" href="#" data-page="certifications">Certifications</a></li>
+        <li><a class="nav-link" href="#" data-page="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page">
+
+    <!-- HOME HERO -->
+    <section class="hero container" id="homeHero">
+      <div class="hero-left">
+        <div class="badge">
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Available for internships • Open to projects</span>
+        </div>
+
+        <h1>Hi, I’m <span class="accent">Parmila</span></h1>
+        <p class="subtitle">Full Stack Developer | UI/UX Designer | CS Undergraduate</p>
+
+        <p class="desc">
+          CS Undergraduate at University of Colombo School of Computing (UCSC) with a strong interest in backend systems,
+          databases, and modern web architecture. I build reliable web applications with clean UI, structured code,
+          and scalable system design.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn primary" type="button" data-page="projects">
+            <i class="fa-solid fa-briefcase"></i>
+            View Projects
+          </button>
+
+          <button class="btn ghost" type="button" data-page="contact">
+            <i class="fa-solid fa-paper-plane"></i>
+            Contact
+          </button>
+
+          <button class="btn ghost" type="button" disabled title="Add CV later (assets/files/CV.pdf)">
+            <i class="fa-solid fa-file-lines"></i>
+            CV (Coming Soon)
+          </button>
+        </div>
+
+        <div class="mini">
+          <a class="mini-link" href="https://github.com/parmila2003" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+
+          <a class="mini-link" href="https://www.linkedin.com/in/parmila-kanagarajah" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+
+          <a class="mini-link" href="mailto:parmila200369@gmail.com">
+            <i class="fa-solid fa-envelope"></i> Email
+          </a>
+        </div>
+      </div>
+
+      <!-- IMAGE ONLY -->
+      <div class="hero-right">
+        <div class="hero-img-wrap">
+          <img class="hero-img" src="assets/images/profile.jpg" alt="Parmila Kanagarajah - Profile Photo" />
+        </div>
+      </div>
+    </section>
+
+    <!-- DYNAMIC CONTENT -->
+    <section class="container dynamic-wrap">
+      <div id="dynamicContent" class="dynamic fade-in"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Parmila Kanagarajah. Built with HTML • CSS • JS</p>
+        <div class="footer-links">
+          <a class="mini-link" href="https://github.com/parmila2003" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i></a>
+          <a class="mini-link" href="https://www.linkedin.com/in/parmila-kanagarajah" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+          <a class="mini-link" href="mailto:parmila200369@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+
+
+   <template id="tpl-about">
+  <section class="panel">
+    <div class="section-head">
+      <h2><i class="fa-solid fa-user"></i> About</h2>
+      <p>Professional background, strengths, and long-term vision.</p>
+    </div>
+
+    <div class="about-grid">
+
+      <!-- PROFESSIONAL PROFILE -->
+      <div class="about-card highlight-card">
+        <h3><i class="fa-solid fa-user"></i> Professional Profile</h3>
+
+        <div class="about-profile">
+          <div class="about-avatar">
+            <img src="assets/images/profile.jpg" alt="Parmila Kanagarajah - Profile Photo">
+          </div>
+
+          <div class="profile-mini">
+            <p><b>Name:</b> Parmila Kanagarajah</p>
+            <p><b>Role:</b> Full Stack Developer | UI/UX Designer  | CS Undergraduate</p>
+            <p><b>University:</b> University of Colombo School of Computing (UCSC)</p>
+            <p><b>Degree:</b> BSc. Computer Science (2024 — Present)</p>
+            <p><b>Current GPA:</b> 3.11</p>
+            <p><b>Location:</b> Colombo, Sri Lanka</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROFILE SUMMARY -->
+      <div class="about-card">
+        <h3><i class="fa-solid fa-pen-nib"></i> Profile Summary</h3>
+
+        <p>
+          I’m currently exploring <b>Advanced JavaScript</b> and <b>Modern Web Architecture</b>, while improving my knowledge in
+          <b>algorithms</b>, <b>clean code practices</b>, <b>system design</b>, and <b>advanced backend development</b>.
+        </p>
+        <p>
+          I actively build real-world projects such as <b>salon management</b> and <b>booking systems</b>, focusing on scalability,
+          usability, and maintainable code.
+        </p>
+
+        <div class="about-tags">
+          <span class="chip">Backend Systems</span>
+          <span class="chip">Database Design</span>
+          <span class="chip">MVC</span>
+          <span class="chip">UI/UX</span>
+          <span class="chip">System Design</span>
+        </div>
+      </div>
+
+      <!-- KEY STRENGTHS -->
+      <div class="about-card">
+        <h3><i class="fa-solid fa-star"></i> Key Strengths</h3>
+        <ul class="list">
+          <li><i class="fa-solid fa-check"></i> MVC-based development & structured architecture</li>
+          <li><i class="fa-solid fa-check"></i> Database-driven systems using SQL</li>
+          <li><i class="fa-solid fa-check"></i> UI/UX consistency & accessibility focus</li>
+          <li><i class="fa-solid fa-check"></i> Strong interest in backend systems & scalability</li>
+          <li><i class="fa-solid fa-check"></i> Continuous learner & detail-oriented developer</li>
+        </ul>
+      </div>
+
+      <!-- CAREER GOAL (NEW SECTION) -->
+      <div class="about-card goal-card">
+        <h3><i class="fa-solid fa-bullseye"></i> Career Goal</h3>
+        <p>
+          My goal is to become a highly skilled <b>Full Stack Software Engineer</b> specializing in 
+          <b>scalable backend systems</b>, <b>clean architecture</b>, and <b>modern web technologies</b>.
+        </p>
+        <p>
+          I aim to contribute to impactful software solutions that solve real-world problems while continuously 
+          improving my expertise in system design, performance optimization, and secure development practices.
+        </p>
+      </div>
+
+    </div>
+  </section>
+</template>
+
+    <template id="tpl-skills">
+      <section class="panel">
+        <div class="section-head">
+          <h2><i class="fa-solid fa-layer-group"></i>  Skills</h2>
+          <p>Technologies I use to build and design products.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="card-top">
+              <div class="icon-badge"><i class="fa-solid fa-code"></i></div>
+              <h3>Programming</h3>
+            </div>
+            <div class="chips">
+              <span class="chip">C</span><span class="chip">C++</span><span class="chip">Python (Basic)</span>
+              <span class="chip">JavaScript</span><span class="chip">PHP</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="card-top">
+              <div class="icon-badge"><i class="fa-solid fa-display"></i></div>
+              <h3>Frontend</h3>
+            </div>
+            <div class="chips">
+              <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+              <span class="chip">Responsive UI</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="card-top">
+              <div class="icon-badge"><i class="fa-solid fa-database"></i></div>
+              <h3>Backend & Database</h3>
+            </div>
+            <div class="chips">
+              <span class="chip">PHP</span><span class="chip">SQL</span><span class="chip">MySQL</span>
+              <span class="chip">MVC Architecture</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="card-top">
+              <div class="icon-badge"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+              <h3>Tools & Design</h3>
+            </div>
+            <div class="chips">
+              <span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">VS Code</span>
+              <span class="chip">Linux/Ubuntu</span><span class="chip">XAMPP/WAMP/Apache</span>
+              <span class="chip">Figma</span><span class="chip">Canva</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="card-top">
+              <div class="icon-badge"><i class="fa-solid fa-people-group"></i></div>
+              <h3>Soft Skills</h3>
+            </div>
+            <div class="chips">
+              <span class="chip">Problem Solving</span><span class="chip">Team Collaboration</span>
+              <span class="chip">Communication</span><span class="chip">Time Management</span>
+              <span class="chip">Attention to Detail</span><span class="chip">Willingness to Learn</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+
+    <template id="tpl-projects">
+      <section class="panel">
+        <div class="section-head">
+          <h2><i class="fa-solid fa-diagram-project"></i> Projects</h2>
+          <p>Selected work that demonstrates development, architecture, and problem-solving.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <div class="project-top">
+              <h3><i class="fa-solid fa-scissors"></i> StyleSphere — Salon Management System</h3>
+              <span class="tag">Ongoing</span>
+            </div><hr>
+            <p class="project-desc">
+              A full-stack salon management platform featuring booking workflows, dashboards, and leave management with a structured MVC architecture.
+            </p>
+            <ul class="p-list">
+              <li>Appointment booking + rescheduling workflow</li>
+              <li>Leave management + manager/stylist dashboards</li>
+              <li>Role-based pages and clean UI structure</li>
+              <li>Database-driven CRUD for core modules</li>
+            </ul>
+            <div class="chips">
+              <span class="chip">PHP</span><span class="chip">MVC</span><span class="chip">MySQL</span>
+              <span class="chip">JavaScript</span><span class="chip">HTML</span><span class="chip">CSS</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <h3><i class="fa-solid fa-truck-fast"></i> SwiftTrack — Middleware Integration Platform</h3>
+              <span class="tag">Academic Team</span>
+            </div>
+            <hr>
+            <p class="project-desc">
+              Event-driven middleware platform for order processing across multiple systems with real-time updates and robust failure handling.
+            </p>
+            <ul class="p-list">
+              <li>API Gateway with authentication</li>
+              <li>RabbitMQ event-driven workflow</li>
+              <li>Worker orchestration (CMS → ROS → WMS)</li>
+              <li>SOAP / REST / TCP integration</li>
+              <li>Retries + DLQ failure handling</li>
+              <li>Real-time status via WebSocket</li>
+            </ul>
+            <div class="chips">
+              <span class="chip">FastAPI</span><span class="chip">RabbitMQ</span><span class="chip">PostgreSQL</span>
+              <span class="chip">Docker</span><span class="chip">WebSocket</span><span class="chip">Event-Driven Architecture</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <h3><i class="fa-solid fa-dice"></i> Ludo Game Simulation</h3>
+              <span class="tag">Academic</span>
+            </div><hr>
+            <p class="project-desc">
+              Console-based Ludo simulation built in C focusing on modular design, rule handling, and round-wise state management.
+            </p>
+            <ul class="p-list">
+              <li>Dice roll and token movement rules</li>
+              <li>Round-wise player status summary</li>
+              <li>Modular structure for maintainability</li>
+            </ul>
+            <div class="chips">
+              <span class="chip">C</span><span class="chip">Game Logic</span><span class="chip">Data Structures</span><span class="chip">Linux</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <h3><i class="fa-solid fa-laptop-code"></i> Personal Portfolio Website</h3>
+              <span class="tag">Personal</span>
+            </div><hr>
+
+            <p class="project-desc">
+              Modern responsive portfolio built with HTML, CSS, and JavaScript to showcase projects, skills, and contact information.
+            </p>
+            <ul class="p-list">
+              <li>Responsive layout with smooth navigation</li>
+              <li>Project showcase with clean card UI</li>
+              <li>Formspree contact integration</li>
+            </ul>
+            <div class="chips">
+              <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">GitHub Pages</span>
+            </div>
+            <div class="project-action">
+              <a class="btn small ghost" href="https://parmila2003.github.io/My-Portfolio/" target="_blank" rel="noreferrer">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </template>
+
+    <template id="tpl-education">
+      <section class="panel">
+
+        <div class="section-block">
+          <div class="section-head" >
+            <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+            <p>Academic background and achievements.</p>
+          </div>
+
+          <div class="edu-grid">
+            <article class="edu-card">
+              <div class="edu-left"><div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div></div>
+              <div class="edu-right">
+                <h3>BSc. Computer Science • 2024 — Present</h3>
+                <p class="muted">University of Colombo School of Computing (UCSC)</p>
+                <p class="edu-meta"><b>Current GPA:</b> 3.11</p>
+              </div>
+            </article>
+
+            <article class="edu-card">
+              <div class="edu-left"><div class="edu-icon"><i class="fa-solid fa-school"></i></div></div>
+              <div class="edu-right">
+                <h3>Advanced Level (Physical Science) • 2022</h3>
+                <p class="muted"><b>School:</b> J/Idaikkadu Maha Vidyalayam</p>
+                <p class="edu-meta"><b>Results:</b> A B C</p>
+              </div>
+            </article>
+
+            <article class="edu-card">
+              <div class="edu-left"><div class="edu-icon"><i class="fa-solid fa-book-open"></i></div></div>
+              <div class="edu-right">
+                <h3>Ordinary Level • 2019</h3>
+                <p class="muted"><b>School:</b> J/Idaikkadu Maha Vidyalayam</p>
+                <p class="edu-meta"><b>Results:</b> 8A 1B</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="section-block">
+          <div class="section-head" >
+            <h2><i class="fa-solid fa-language"></i> Leadership & Activities</h2>
+            <p>Roles that strengthened teamwork and responsibility.</p>
+          </div>
+
+          <div class="grid-2">
+            <article class="card">
+              <div class="card-top">
+                <div class="icon-badge"><i class="fa-solid fa-user-tie"></i></div>
+                <h3>School Senior Head Prefect</h3>
+              </div>
+              <ul class="p-list">
+                <li>Led student body with discipline and responsibility</li>
+                <li>Supported school administration and event coordination</li>
+                <li>Strengthened communication and leadership skills</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="card-top">
+                <div class="icon-badge"><i class="fa-solid fa-people-group"></i></div>
+                <h3>School Netball Team Captain</h3>
+              </div>
+              <ul class="p-list">
+                <li>Managed team coordination and practice discipline</li>
+                <li>Encouraged collaboration and team motivation</li>
+                <li>Improved decision-making under pressure</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <div class="section-block">
+          <div class="section-head" >
+            <h2><i class="fa-solid fa-language"></i> Languages</h2>
+            <p>Languages I use for collaboration and documentation.</p>
+          </div>
+
+          <div class="grid-2">
+            <article class="lang-card">
+              <div class="lang-row">
+                <div class="lang-left">
+                  <div class="lang-icon"><i class="fa-solid fa-language"></i></div>
+                  <div>
+                    <h3>Tamil</h3>
+                    <p class="muted">Native</p>
+                  </div>
+                </div>
+                <div class="lang-percent">100%</div>
+              </div>
+              <div class="lang-bar"><span style="width:100%"></span></div>
+            </article>
+
+            <article class="lang-card">
+              <div class="lang-row">
+                <div class="lang-left">
+                  <div class="lang-icon"><i class="fa-solid fa-language"></i></div>
+                  <div>
+                    <h3>English</h3>
+                    <p class="muted">Professional</p>
+                  </div>
+                </div>
+                <div class="lang-percent">85%</div>
+              </div>
+              <div class="lang-bar"><span style="width:85%"></span></div>
+            </article>
+          </div>
+        </div>
+
+      </section>
+    </template>
+
+    <template id="tpl-certifications">
+      <section class="panel">
+        <div class="section-head">
+          <h2><i class="fa-solid fa-certificate"></i> Certifications</h2>
+          <p>Click a certificate to open the full PDF.</p>
+        </div>
+
+        <div class="cert-grid">
+
+          <article class="cert-card">
+            <div class="cert-title">
+              <div class="cert-icon"><i class="fa-solid fa-code"></i></div>
+              <h3>CSS Basics</h3>
+            </div>
+
+            <a class="cert-thumb" href="assets/files/css certificate.pdf" target="_blank" rel="noreferrer">
+              <img src="assets/images/certs/css.png" alt="CSS Basics certificate preview">
+              <div class="cert-open">
+                <i class="fa-solid fa-up-right-from-square"></i>
+                <span>Open PDF</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="cert-card">
+            <div class="cert-title">
+              <div class="cert-icon"><i class="fa-solid fa-database"></i></div>
+              <h3>SQL Basics</h3>
+            </div>
+
+            <a class="cert-thumb" href="assets/files/sql_basic certificate.pdf" target="_blank" rel="noreferrer">
+              <img src="assets/images/certs/sql.png" alt="SQL Basics certificate preview">
+              <div class="cert-open">
+                <i class="fa-solid fa-up-right-from-square"></i>
+                <span>Open PDF</span>
+              </div>
+            </a>
+          </article>
+
+        </div>
+      </section>
+    </template>
+
+    <template id="tpl-contact">
+      <section class="panel">
+        <div class="section-head">
+          <h2><i class="fa-solid fa-user"></i> Contact</h2>
+          <p>Let’s connect — open to collaborations, projects, and opportunities.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Contact Information</h3>
+            <p class="muted">Reach out through email, phone, or social platforms.</p>
+
+            <div class="contact-item">
+              <span class="contact-label"><i class="fa-solid fa-envelope"></i> Email</span>
+              <a href="mailto:parmila200369@gmail.com">parmila200369@gmail.com</a>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-label"><i class="fa-solid fa-phone"></i> Phone</span>
+              <a href="tel:+94766832514">+94 76 683 2514</a>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-label"><i class="fa-solid fa-location-dot"></i> Address</span>
+              <span class="muted">No 40, Daya Road, Wellawatte, Colombo 06.</span>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-label"><i class="fa-brands fa-github"></i> GitHub</span>
+              <a href="https://github.com/parmila2003" target="_blank" rel="noreferrer">github.com/parmila2003</a>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-label"><i class="fa-brands fa-linkedin"></i> LinkedIn</span>
+              <a href="https://www.linkedin.com/in/parmila-kanagarajah" target="_blank" rel="noreferrer">
+                linkedin.com/in/parmila-kanagarajah
+              </a>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-label"><i class="fa-brands fa-instagram"></i> Instagram</span>
+              <a href="https://instagram.com/parmi_k.rajah" target="_blank" rel="noreferrer">@parmi_k.rajah</a>
+            </div>
+          </div>
+
+          <form class="contact-form" method="POST" action="https://formspree.io/f/xreabvba">
+            <h3>Send a Message</h3>
+
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@email.com" required />
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+            </div>
+
+            <button class="btn primary" type="submit">
+              <i class="fa-solid fa-paper-plane"></i> Send
+            </button>
+
+          </form>
+        </div>
+      </section>
+    </template>
+
+  </main>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
